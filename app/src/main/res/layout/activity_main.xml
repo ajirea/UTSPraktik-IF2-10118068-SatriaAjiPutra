@@ -28,10 +28,11 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:paddingHorizontal="16dp"
         android:clipChildren="false"
-        android:scrollbars="none">
+        android:scrollbars="none"
+        android:layout_weight="1">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -87,7 +88,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginBottom="24dp"
-                android:inputType="text"
+                android:inputType="number"
                 android:hint="Masukkan NIK"
                 android:textSize="14sp"
                 android:fontFamily="@font/roboto"
@@ -154,6 +155,8 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="24dp"
                 android:inputType="date"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
                 android:hint="Pilih Tanggal"
                 android:textSize="14sp"
                 android:fontFamily="@font/roboto"
@@ -191,6 +194,7 @@
                     android:id="@+id/radioMale"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:checked="true"
                     android:text="Laki - Laki"
                     android:textSize="14sp"
                     android:fontFamily="@font/roboto"
@@ -235,6 +239,7 @@
                     android:id="@+id/radioOrangtua"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:checked="true"
                     android:text="Orangtua"
                     android:textSize="14sp"
                     android:fontFamily="@font/roboto"
@@ -264,19 +269,23 @@
                     android:fontFamily="@font/roboto"
                     android:textColor="@color/gray_800"/>
             </RadioGroup>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="32dp"
-                android:textColor="@color/white"
-                android:textSize="14sp"
-                android:textAllCaps="false"
-                android:fontFamily="@font/roboto_bold"
-                android:background="@drawable/bg_btn_primary"
-                android:text="Selanjutnya"/>
         </LinearLayout>
     </ScrollView>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
+        android:elevation="0dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/roboto_bold"
+        style="?android:attr/borderlessButtonStyle"
+        android:background="@drawable/bg_btn_primary"
+        android:text="Selanjutnya"/>
 
 </LinearLayout>
